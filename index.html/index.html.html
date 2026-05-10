@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mother's Day Greeting Card</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background: linear-gradient(135deg,#ffd6e7,#ffeef5,#fff6d6);
+        overflow:hidden;
+    }
+
+    .card{
+        width:900px;
+        max-width:95%;
+        min-height:520px;
+        background:white;
+        border-radius:25px;
+        box-shadow:0 15px 40px rgba(0,0,0,0.2);
+        display:flex;
+        overflow:hidden;
+        position:relative;
+    }
+
+    /* Floating hearts */
+    .heart{
+        position:absolute;
+        color:#ff4f81;
+        font-size:22px;
+        animation:float 6s linear infinite;
+        opacity:0.7;
+    }
+
+    .heart:nth-child(1){ left:10%; animation-duration:7s;}
+    .heart:nth-child(2){ left:30%; animation-duration:9s;}
+    .heart:nth-child(3){ left:60%; animation-duration:8s;}
+    .heart:nth-child(4){ left:80%; animation-duration:10s;}
+
+    @keyframes float{
+        0%{
+            transform:translateY(100vh) scale(0.5);
+        }
+        100%{
+            transform:translateY(-120vh) scale(1.3);
+        }
+    }
+
+    .left{
+        flex:1;
+        background:linear-gradient(160deg,#ff8eb4,#ffbfd4);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        position:relative;
+        padding:20px;
+    }
+
+    .photo-frame{
+        width:320px;
+        height:320px;
+        border-radius:50%;
+        overflow:hidden;
+        border:10px solid white;
+        box-shadow:0 10px 30px rgba(0,0,0,0.25);
+        animation:floatPhoto 4s ease-in-out infinite;
+    }
+
+    .photo-frame img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    @keyframes floatPhoto{
+        0%,100%{
+            transform:translateY(0px);
+        }
+        50%{
+            transform:translateY(-18px);
+        }
+    }
+
+    .right{
+        flex:1;
+        padding:50px 40px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    h1{
+        color:#ff3d73;
+        font-size:3rem;
+        margin-bottom:15px;
+    }
+
+    .subtitle{
+        font-size:1.2rem;
+        color:#555;
+        margin-bottom:25px;
+    }
+
+    .message{
+        font-size:1.1rem;
+        line-height:1.8;
+        color:#444;
+    }
+
+    .signature{
+        margin-top:30px;
+        font-size:1.3rem;
+        color:#ff3d73;
+        font-weight:bold;
+    }
+
+    .flower{
+        position:absolute;
+        bottom:15px;
+        right:25px;
+        font-size:50px;
+    }
+
+    @media(max-width:768px){
+        .card{
+            flex-direction:column;
+        }
+
+        h1{
+            font-size:2.3rem;
+        }
+
+        .photo-frame{
+            width:240px;
+            height:240px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+
+<div class="card">
+
+    <!-- Left Side Photo -->
+    <div class="left">
+        <div class="photo-frame">
+            <!-- Replace image URL with your own mother & son image -->
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000&auto=format&fit=crop" alt="Mother and Son Hugging">
+        </div>
+    </div>
+
+    <!-- Right Side Message -->
+    <div class="right">
+        <h1>Happy Mother's Day 💖</h1>
+
+        <div class="subtitle">
+            To the most wonderful mother in the world
+        </div>
+
+        <div class="message">
+            Dear Mom,<br><br>
+
+            Your love is the light that brightens every day of my life.
+            Thank you for your endless care, warm hugs, kindness,
+            and strength. You are my inspiration, my comfort,
+            and my greatest blessing.<br><br>
+
+            On this special Mother's Day, I wish you happiness,
+            good health, endless smiles, and all the love your
+            heart can hold. You deserve the world for all the
+            sacrifices and love you give every single day.<br><br>
+
+            I love you forever and always. 💕
+        </div>
+
+        <div class="signature">
+            — Your Loving Son Darsh
+        </div>
+    </div>
+
+    <div class="flower">🌸</div>
+
+</div>
+
+</body>
+</html>
